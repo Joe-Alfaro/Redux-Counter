@@ -4,7 +4,7 @@ import { increment, decrement } from '../actions';
 
 class Counter extends Component {
   incrementIfOdd = event => {
-    if(this.props.count%2 != 0){
+    if(this.props.count%2 !== 0){
       this.incrementCount(event);
     }
   };
@@ -14,7 +14,7 @@ class Counter extends Component {
     this.props.increment(this.props.count)
   }
 
-  incrementAsync = (event) => {
+  incrementAsync = event => {
     setTimeout(() => {
         this.incrementCount(event)
     }, 1000)
